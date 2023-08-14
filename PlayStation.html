@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head section -->
+<head>
+
+    <!-- Meta tags for responsiveness and encoding -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- External custom CSS stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <!-- Page title -->
+    <title>CFGG Playstation</title>
+
+    <!-- Font For the Home Page -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--Link for Importing Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<!-- Body section -->
+<body>
+
+   <!-- Header section -->
+   <header>  
+    <!--navbar group-->  
+    <nav class="navbar custom-bg-color navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!--Logo on nav bar-->
+            <a class="navbar-brand" href="index.html">
+                <img src="Pics/CFGG Logo2.png" alt="CFGG" height="120px" width="210px"> </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="pics/CFGG Logo2.png" alt="Logo"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="hover navbar-nav justify-content-center flex-grow-1 pe-5">
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color home-link" aria-current="page" href="Index.html" target="_blank">Home</a>
+                            <!-- Add links to nav buttons -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Mobile.html" target="_blank">Mobile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Switch.html" target="_blank">Switch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active custom-link-color nav-item-link" aria-current="page" href="PlayStation.html" target="_blank">PlayStation</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search Bar-->
+                    <div class="header-search">
+                    <form class="d-flex mt-3 search-form" role="search">
+                        <div class="search-input">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <button class="btn magnifying-glass" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    </div>
+                    
+                    <!-- Cart Icon -->
+                    <div class="cart-container">
+                        <button id="cart" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Cart Pop Up Box -->
+                    <div class="popup-cart">
+                        <div class="close-btn">&times;</div>
+                        <div class="cart-content">
+                            <h2>Your Cart</h2>
+                            <div class="game-item">
+                                <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-sackboy-image-block-01-en-28jul21?$1600px$" alt="Sackboy" width="50px">
+                                <p>Sackboy™: A Big Adventure</p>
+                            </div>
+                            <div class="game-item">
+                                <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-ratchet-and-clank-rift-apart-image-block-en-26aug22?$1600px$" alt="Ratchet And Clank" width="50px">
+                                <p>Ratchet And Clank Rrift Apart</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Account Icon -->
+                    <div class="account-container">
+                        <button id="account" class="account-icon">
+                            <i class="fas fa-user"></i>
+                        </button>
+                    </div>
+
+                    <!-- Account Pop Up Box -->
+                    <div class="popup"> 
+                        <div class="close-btn">&times;</div> <!--cross in top right corner to close pop up-->                           
+                        <div class="form"> <!--Log in & elements on pop up box-->
+                            <h2>Log In</h2>
+                            <div class="form-element">
+                                <label for="email">Email</label><!--email input bar-->
+                                <input type="Text" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-element"> <!--password input bar-->
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-element">
+                                <button> Log In </button> <!--Button to log in-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+   
+    <!-- Hero section -->
+    <div class="hero text-center">
+        <div class="hero-content text-light">
+            <i class="fas fa-fire mt-n1 me-1 hot-icon"></i> <!-- Flame icon -->
+            <!-- Title -->
+            <h1 class="hot-topic-title">Get Ready for the Hottest Gaming News</h1>
+        </div>
+        <img src="Pics/PlayStation2.png" alt="Hero Background" class="hero-background">
+    </div>
+    
+    
+    <!-- Latest News Articles -->
+    <section id="latest-news" class="news">
+        <div class="news-articles">
+            <div class="article-card">
+                <img src="https://images.pushsquare.com/adeff1a220e15/250x183.jpg" alt="Smurfs Kart Targets Game" height="200px">
+                <div class="article-content">
+                    <h3>Smurfs Kart Targets Game of the Year Status on PS5, PS4</h3>
+                    <p>Smurfs Kart is launching on 22nd August for PS5 and PS4, bringing disruption to the ongoing Game of the Year debate. All insincerity aside, the arcade racer from French duo Microids and Eden Games first launched on Nintendo Switch last year, and is now getting a wider release across PlayStation and various other platforms, including ...</p>
+                    <a href="https://www.pushsquare.com/news/2023/05/smurfs-kart-targets-game-of-the-year-status-on-ps5-ps4" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://images.pushsquare.com/3a77496903bc4/250x183.jpg" alt="Mortal Kombat 1's PS5 Pre-Order" height="200px">
+                <div class="article-content">
+                    <h3>Here's When Mortal Kombat 1's PS5 Pre-Order Beta Starts</h3>
+                    <p>You won’t have to wait long to try out Mortal Kombat 1 – in fact, the game’s pre-order beta is just weeks away. NetherRealm Studios has confirmed that the game’s promotional test will get underway from 18th August through 21st August, and you’ll just need to have a valid PS5 pre-order to participate...</p>
+                    <a href="https://www.pushsquare.com/news/2023/07/heres-when-mortal-kombat-1s-ps5-pre-order-beta-starts" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://images.pushsquare.com/6a80d1b5fc0bf/250x183.jpg" alt="Cyberpunk 2077's Phantom Liberty Expansion" height="200px">
+                <div class="article-content">
+                    <h3>Cyberpunk 2077's Phantom Liberty Expansion Is So, So Much More Than PS5 DLC</h3>
+                    <p>Cyberpunk 2077's impending Phantom Liberty expansion (launching on PS5 on 26th September) is much more than simple DLC, instead being an overhaul of virtually every inch of Night City. It goes far beyond the scope of what some might expect and is a true expansion, according to comments made by creative director Pawel Sasko at Summer Game Fest...</p>
+                    <a href="https://www.pushsquare.com/news/2023/06/cyberpunk-2077s-phantom-liberty-expansion-is-so-so-much-more-than-ps5-dlc" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://images.pushsquare.com/6749f62cd3605/250x183.jpg" alt="Atlas Fallen (PS5) - The Surge" height="200px">
+                <div class="article-content">
+                    <h3>Atlas Fallen (PS5) - The Surge Dev's Best Game Yet</h3>
+                    <p>While it was The Surge that put Deck13 Interactive's name on the map, it's Atlas Fallen that will henceforth be considered the studio's best game to date. Switching the Souls-like structure of its past titles for a more traditional open world adventure with difficulty options, it boasts of excellent traversal and a fun combat system in a sandy setting ruled by an evil god...</p>
+                    <a href="https://www.pushsquare.com/reviews/ps5/atlas-fallen" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://images.pushsquare.com/9094c0f29a4ca/250x183.jpg" alt="Lies of P Goes Gold with September PS5, PS4" height="200px">
+                <div class="article-content">
+                    <h3>Lies of P Goes Gold with September PS5, PS4 Launch Looming</h3>
+                    <p>Indie Souls-like Lies of P has gone gold ahead of its planned 19th September 2023 release date, meaning work on the 1.0 version of the game is complete. Confirming the news on Twitter, Round8 Studio said: "It is our genuine pleasure to announce that Lies of P has gone gold. Truly, we cannot wait for your arrival in Krat on September 19."...</p>
+                    <a href="https://www.pushsquare.com/news/2023/08/lies-of-p-goes-gold-with-september-ps5-ps4-launch-looming" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <!-- Add more article cards here -->
+        </div>
+    </section>
+    
+    <!-- Popular Games Section -->
+    <div class="popular-games">
+        <div class="game-card">
+            <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-horizon-forbidden-west-image-block-01-en-28jul21?$1600px$" alt="Horizon Forbidden West">
+            <h3>Horizon Forbidden West</h3>
+            <h4> Explore distant lands, fight bigger and more awe-inspiring machines, and encounter astonishing new tribes as you return to the far-future, post-apocalyptic world of Horizon. </h4>
+            <a href="https://www.playstation.com/en-gb/games/horizon-forbidden-west/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-demons-souls-image-block-01-en-28jul21?$1600px$" alt="Demon's Souls">
+            <h3>Demon's Souls</h3>
+            <h4> Entirely rebuilt from the ground up, this remake invites you to experience the unsettling story and ruthless combat of Demon’s Souls™. </h4>
+            <a href="https://www.playstation.com/en-gb/games/demons-souls/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-ratchet-and-clank-rift-apart-image-block-en-26aug22?$1600px$" alt="Ratchet And Clank">
+            <h3>Ratchet & Clank: Rift Apart</h3>
+            <h4> Blast your way through an interdimensional adventure. Blast your way through an interdimensional adventure. </h4>
+            <a href="https://www.playstation.com/en-gb/games/ratchet-and-clank-rift-apart/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-spiderman-miles-morales-image-block-en-26aug22?$1600px$" alt="Marvel's Spider-Man">
+            <h3>Spider-Man: Miles Morales</h3>
+            <h4> Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man. </h4>
+            <a href="https://www.playstation.com/en-gb/games/marvels-spider-man-miles-morales/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-sackboy-image-block-01-en-28jul21?$1600px$" alt="Sackboy">
+            <h3>Sackboy™: A Big Adventure</h3>
+            <h4> Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure – and a whole new edgy sackitude! </h4>
+            <a href="https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <!-- Add more game cards here -->
+    </div>
+    
+    
+    <!-- Footer Section -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="footerlogo"> <!--footer logo-->
+        <img src="Pics/CFGG Logo2.png" alt="CFGG" height="90px" width="180px">
+        <div class="footercontents">
+            <ul> <!--add links-->
+                <li class="footer-item">
+                    <a href="#">Terms of Use</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="social-wrapper"> <!--social media icons-->
+        <ul>
+            <li>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="Pics/twitter.png" alt="Twitter Logo" class="twitter-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="Pics/insta.png" alt="Instagram Logo" class="instagram-icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://discord.com/" target="_blank">
+                            <img src="Pics/discord.png" alt="Discord Logo" class="discord-icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/" target="_blank">
+                                <img src="Pics/facebook.png" alt="Facebook Logo" class="facebook-icon"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitch.com/" target="_blank">
+                                    <img src="Pics/twitch.png" alt="twitch Logo" class="twitch-icon"></a>
+                                </li>
+                                <li>
+                                    <a href="https://youtube.com/" target="_blank">
+                                        <img src="Pics/youtube.png" alt="Youtube Logo" class="youtube-icon"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav" role="navigation"><!--text with company/copyright-->
+                                <h6>CFGG &copy; All rights reserved.</h6>
+                            </div>
+                        </footer>
+<!--Adding CSS Bootstrap link here -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+
+<!--Linkig JavaScript file here -->
+<script src = "JavaScriptAll.js"></script>   
+
+</body>
+</html>

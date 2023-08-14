@@ -1,0 +1,629 @@
+/* CSS STYLING FOR CFGG PAGE*/
+
+/* CSS STYLE FOR HEADER */
+
+/* Applyimg Open Sans font to body and all its children */
+body, p, h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+/* Applying Open Sans font to the navigation links */
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Setting the font size for the entire navbar */
+  .navbar {
+    font-size: 22px;
+    padding: 10px;
+    }
+  
+  /* Center-align the navigation items and add left padding */
+  .navbar-nav {
+    padding-top: 10px; /*Centered nav bar elements */
+    text-align: center;
+    padding-left: 100px; /* Centered nav bar elements */
+    color: #ffffff; /* Text color for the navigation items */
+  }
+
+  
+  /* Change the color of all navigation links */
+  .navbar a {
+    color: #ffffff; /* Text color for navigation links */
+  }
+  
+  /* Apply color change on hover for navigation links */
+  .navbar a:hover {
+    color: #0BC9CD; /* Text color on hover */
+  }
+  
+  /* Adding styles for the active navigation link */
+  .navbar .nav-item-link.active {
+    color: #14FFF7; /* Change the color to the desired color */
+    font-weight: bold; /* Add font weight if desired */
+  }
+
+/* Add vertical bar and space between navigation links */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Adjust the margin value to control spacing */
+    position: relative;
+  }
+  
+  .navbar-nav .nav-item::after {
+    content: "|"; /* Add the vertical bar as content */
+    position: absolute;
+    top: 50%;
+    right: -10.5px; /* Adjust the position to control spacing around the bar */
+    transform: translateY(-50%);
+    color: #14FFF7; /* Color of the bar */
+  }
+  
+  .navbar-nav .nav-item:last-child::after {
+    content: none; /* Remove the bar from the last item */
+  }
+  
+/* Search Button Styles */
+
+.search-input {
+    display: none;
+    transition: all 0.3s ease; /* Adding transition for smooth animation */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.magnifying-glass {
+    display: flex;
+    padding: 5px; /* Adjust padding as needed */
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease; /* Adding transition for smooth animation */
+    margin: 0 10px; /* Add spacing between the icons */
+}
+
+.cart-icon,
+.account-icon {
+    display: flex;
+    padding: 5px; /* Adjust padding as needed */
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease; /* Adding transition for smooth animation */
+    margin: 0 10px; /* Add spacing between the icons */
+    margin-top: 15px;
+}
+
+.magnifying-glass i,
+.cart-icon i,
+.account-icon i {
+    font-size: 34px; /* Adjust the icon size as needed */
+    color: #FF6A92; /* Pink color */
+}
+
+.magnifying-glass:hover i,
+.account-icon:hover i,
+.cart-icon:hover i {
+    color: #14FFF7; /* Change the color on hover */
+}
+
+/* Styling for the expanded state */
+.expanded .search-input {
+    display: block;
+}
+
+.expanded .magnifying-glass {
+    padding: 5px; /* Keep the padding consistent when expanded */
+    color: #FFFFFF; /* Change the icon color */
+    background-color: transparent;
+}
+
+/*Small device Navbar toggler style*/
+button.navbar-toggler {
+    background-color: #FF6A92;
+}
+  
+/*Small device navbar list styling*/
+#offcanvasNavbar {
+    background-color: #1d8a99;
+    color: #FF6A92;
+    display: flex;
+}
+
+/*Small device navbar link list*/
+  .offcanvas-body {
+    margin-right: 25px;  /*centered to navbar*/
+  }
+
+/*Small device Navbar logo style*/
+#offcanvasNavbarLabel img {
+    height: 80px;
+    display: block;
+    margin: auto;
+}
+
+/* Cart Pop Up Box (Styled to match Account Pop Up) */
+
+.popup-cart {
+    background-color: #0BC9CD; 
+    position: fixed; /*so that it centers to page not navbar parent*/
+    top: 50%; /*to help center to page*/
+    bottom:30%; /*to help center to page*/
+    right: 38%; /*to help center to page*/
+    left:50%; /*to help center to page*/
+    opacity: 0; /*so its not visible unless pressed*/
+    transform: translate(-50%,-50%); /*to help center to page*/
+    width: 350px; /*size of pop up box*/
+    height: 300px; /*size of pop up box*/
+    padding:30px; /*size of pop up box*/
+    box-shadow: 3px 2px 2px 3px #0BC9CD; /*outer glow settings*/
+    box-shadow: 0 40px 30px #fff; /*outer glow settings*/
+    box-shadow: 0 0 60px 60px #f0f; /*outer glow settings*/
+    box-shadow: 0 0 20px 30px #0BC9CD;   /*outer glow settings*/
+    border-radius: 10px;
+    justify-content: center; 
+    box-shadow: /*inner glow settings*/
+      inset 0 0 40px #14FFF7,      /*inner glow settings*/
+      inset 20px 0 80px #FF6A92,   /*inner glow settings*/
+      inset -20px 0 80px #0BC9CD,  /*inner glow settings*/
+      inset 20px 0 200px #FF6A92,  /*inner glow settings*/
+      inset -20px 0 200px #0BC9CD, /*inner glow settings*/
+      0 0 40px #14fff7,            /*inner glow settings*/
+      -10px 0 80px #FF6A92,        /*inner glow settings*/
+      10px 0 80px #0BC9CD;  /*inner glow settings*/
+  }
+
+.popup-cart.active {
+    top:50%;
+    opacity: 1;
+    transform: translate(-50%,-50%)
+  }
+
+.popup-cart .closecart-btn {
+    position:absolute;
+    top:15px;
+    right:15px;
+    height: 20px;
+    width: 20px;
+    color: #FF6A92;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+.popup-cart h2 {
+    text-align: center;
+    color: #0E0F1A;
+    font-size: 24px;
+  }
+
+.popup-cart .cart-content {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.popup-cart .game-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #FFFFFF;
+}
+
+.popup-cart .game-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.popup-cart .game-item p {
+    margin: 0;
+}
+
+
+/* Account Pop Up Box */
+  
+.popup { /*styles for pop up that appears after pressing account*/
+    background-color: #0BC9CD; 
+    position: fixed; /*so that it centers to page not navbar parent*/
+    top: 50%; /*to help center to page*/
+    bottom:30%; /*to help center to page*/
+    right: 38%; /*to help center to page*/
+    left:50%; /*to help center to page*/
+    opacity: 0; /*so its not visible unless pressed*/
+    transform: translate(-50%,-50%); /*to help center to page*/
+    width: 350px; /*size of pop up box*/
+    height: 300px; /*size of pop up box*/
+    padding:30px; /*size of pop up box*/
+    box-shadow: 3px 2px 2px 3px #0BC9CD; /*outer glow settings*/
+    box-shadow: 0 40px 30px #fff; /*outer glow settings*/
+    box-shadow: 0 0 60px 60px #f0f; /*outer glow settings*/
+    box-shadow: 0 0 20px 30px #0BC9CD;   /*outer glow settings*/
+    border-radius: 10px;
+    justify-content: center; 
+    box-shadow: /*inner glow settings*/
+      inset 0 0 40px #14FFF7,      /*inner glow settings*/
+      inset 20px 0 80px #FF6A92,   /*inner glow settings*/
+      inset -20px 0 80px #0BC9CD,  /*inner glow settings*/
+      inset 20px 0 200px #FF6A92,  /*inner glow settings*/
+      inset -20px 0 200px #0BC9CD, /*inner glow settings*/
+      0 0 40px #14fff7,            /*inner glow settings*/
+      -10px 0 80px #FF6A92,        /*inner glow settings*/
+      10px 0 80px #0BC9CD;  /*inner glow settings*/
+  }
+
+  .popup.active { /*once pop up is clicked adjusts opacity*/
+    top:50%;
+    opacity: 1;
+    transform: translate(-50%,-50%)
+  }
+
+  .popup .close-btn { /*close x button in top right corner*/
+    position:absolute;
+    top:15px;
+    Right:15px;
+    height: 20px;
+    width: 20px;
+    color: #FF6A92;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .form h2 { /* Log in title on pop up*/
+    text-align: center;
+    color: #0E0F1A;
+  }
+
+  .popup .form .form-element { /*div for email & password boxes*/
+    margin: 15px 0px;
+}
+  .popup .form .form-element label { /*title for email & password boxes*/
+    font-size: 14px;
+    color: #222;
+}
+
+  .popup .form .form-element input { /*email & password boxes*/
+     display: block;
+     border-radius: 5px;
+      background-color:#FF6A92;
+      color: #0E0F1A;
+}
+
+  .popup .form .form-element button { /*log in button on pop up*/
+    border-radius: 5px;
+    background-color: #FF6A92;
+}
+
+
+
+  /* CSS STYLES FOR THE BODY */
+  /* Custom CSS to colour to the body of the website */
+  body {
+    background-color: #0E0F1A; /* Can change the colour for background here */
+    padding-top: 140px; /*Added so navbar doesn't cover carousel*/
+  }
+  
+  /* Custom CSS to override the bg-body-tertiary class */
+  .custom-bg-color {
+    background-color: #0E0F1A;
+  }
+
+/* HERO SECTION STYLES */
+.hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+
+/* Custom CSS for styling the flame icon */
+.hot-icon {
+    color: #FF5733; /* Orange/red color */
+    font-size: 2.5rem; /* Adjust the size as needed */
+    position: relative;
+    z-index: 1; /* Bring the title to the front */
+}
+
+/* Custom CSS for styling the title */
+.hot-topic-title {
+    font-size: 2.5rem; /* Adjust the size as needed */
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1; /* Bring the title to the front */
+}
+
+
+/* LATEST NEWS ARTICLES STYLE */
+.news {
+    background-color: #0E0F1A; /* Background color */
+    color: #FFFFFF; /* Text color */
+    padding: 30px 0;
+}
+
+.news-articles {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.article-card {
+    display: flex;
+    width: 100%;
+    background-color: #1D8A99; /* Article card background color */
+    color: #ffffff; /* Article text color */
+    text-shadow: #BCB8B8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.article-card img {
+    width: 200px;
+    height: 180px;
+    border-radius: 4px;
+    margin-right: 20px;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+.article-card h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #14FFF7; /* Background color */
+    color: #333; /* Text color */
+    padding: 5px 10px; /* Add padding to create a highlight effect */
+    border-radius: 4px; /* Add rounded corners to the background */
+    font-weight: bold;
+}
+
+.article-card p {
+    color: #ffffff; /* Paragraph text color */
+    margin-bottom: 10px;
+    text-align: justify;
+    flex-grow: 1; /* Allow the text to expand and fill the remaining space */
+}
+
+.article-card .read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #FF6A92; /* Button background color */
+    color: #FFFFFF; /* Button text color */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 40px; /* Align the button to the bottom of the card */
+    margin-bottom: 10px; /* Add margin at the bottom of the card */
+}
+
+.article-card .read-more:hover {
+    background-color: #FF3E6E; /* Button background color on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .article-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-card h3 {
+        text-align: left;
+    }
+
+    .article-card p {
+        margin: 10px 0; /* Add margin to separate paragraphs */
+    }
+}
+
+/* POPULAR GAMES STYLES */
+.popular-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.game-card {
+    position: relative; /* Add relative positioning to the game card */
+    width: calc(20% - 20px); /* Adjust the width and margin as needed */
+    background-color: #14FFF7; /* Game card background color */
+    color: #333333; /* Game text color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.game-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    color: #ffffff; /* Text color */
+    padding: 10px; /* Add some padding for better readability */
+}
+
+.game-card h4 {
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.game-card .buy-now {
+    position: absolute; /* Position the button absolutely within the card */
+    bottom: 10px; /* Adjust the value as needed */
+    left: 20px; /* Adjust the value as needed */
+    padding: 8px 16px;
+    background-color: #FF6A92; /* Button background color */
+    color: #FFFFFF; /* Button text color */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.game-card:hover {
+    background-color: #0BC9CD; /* Changing the background color on hover */
+    transform: translateY(-5px); /* Adding a slight upward translation on hover */
+}
+
+.game-card .buy-now:hover {
+    background-color: #FF3E6E; /* Button background color on hover */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .game-card {
+        width: calc(100% - 20px); /* Full width on smaller screens */
+    }
+}
+
+/*FOOTER */
+/* Custom CSS styles for Footer Section */
+.social-footer {
+    padding: 1rem;
+    background: #FF6A92;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footerlogo {
+    margin-left: 30px;
+    display: flex;
+    align-items: left;
+    position: absolute;
+  }
+  
+  .site-footer {
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  
+  /* Social Media Icons */
+  .social-wrapper {
+    text-align: right;
+    margin-right: 60px;
+  }
+  
+  .social-wrapper ul li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  .twitter-icon,
+  .facebook-icon,
+  .instagram-icon,
+  .discord-icon,
+  .twitch-icon,
+  .youtube-icon {
+    margin-top: 0.625em;
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    border-radius: 25px;
+  }
+  
+  .twitter-icon:hover,
+  .facebook-icon:hover,
+  .instagram-icon:hover,
+  .discord-icon:hover,
+  .twitch-icon:hover,
+  .youtube-icon:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+  }
+  
+  .site-footer {
+    background-color: #0E0F1A;
+  }
+  
+  .footercontents ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    color: #BCB8B8;
+    display: flex;
+    align-items: left;
+    margin-top: 30px;
+  }
+  
+  .footercontents ul li {
+    list-style-type: none;
+
+  }
+  
+  .footer-item > a:link {
+    padding: 10px;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  
+  .footer-nav {
+    color: #BCB8B8;
+  }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .social-footer {
+        flex-direction: column; /* Stack content on smaller screens */
+        text-align: center;
+    }
+
+    .footerlogo {
+        margin: 20px 0; /* Adjust margin to create space between logo and links */
+        margin-left: 20px;
+    }
+
+    .social-wrapper ul {
+        margin-top: 40px;
+    }
+
+    .footercontents ul {
+        flex-direction: column; /* Stack links under each other on smaller screens */
+        margin-top: 10px; /* Add space between logo and links */
+    }
+
+    .footercontents ul li {
+        margin: 5px 0; /* Add smaller margin between links */
+    }
+
+    .twitter-icon,
+    .facebook-icon,
+    .instagram-icon,
+    .discord-icon,
+    .twitch-icon,
+    .youtube-icon {
+        width: 25px; /* Reduce icon size */
+        height: 25px;
+        margin-top: 110px;
+    }
+}

@@ -1,0 +1,783 @@
+/* CSS STYLING FOR CFGG WEBSITE HOMEPAGE */
+
+/* CSS STYLE FOR HEADER */
+
+/* Applyimg Open Sans font to body and all its children */
+body, p, h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+/* Applying Open Sans font to the navigation links */
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Setting the font size for the entire navbar */
+  .navbar {
+    font-size: 22px;
+    padding: 10px;
+    }
+  
+  /* Center-align the navigation items and add left padding */
+  .navbar-nav {
+    padding-top: 10px; /*Centered nav bar elements */
+    text-align: center;
+    padding-left: 100px; /* Centered nav bar elements */
+    color: #ffffff; /* Text color for the navigation items */
+  }
+
+  
+  /* Change the color of all navigation links */
+  .navbar a {
+    color: #ffffff; /* Text color for navigation links */
+  }
+  
+  /* Apply color change on hover for navigation links */
+  .navbar a:hover {
+    color: #0BC9CD; /* Text color on hover */
+  }
+  
+  /* Adding styles for the active navigation link */
+  .navbar .nav-item-link.active {
+    color: #14FFF7; /* Change the color to the desired color */
+    font-weight: bold; /* Add font weight if desired */
+  }
+
+/* Styling for the "Home" link */
+.navbar .home-link {
+    color: #14FFF7; /* Blue color for the "Home" link */
+    font-weight: bold; /* Reset font weight to default */
+}
+
+/* Add vertical bar and space between navigation links */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Adjust the margin value to control spacing */
+    position: relative;
+  }
+  
+  .navbar-nav .nav-item::after {
+    content: "|"; /* Add the vertical bar as content */
+    position: absolute;
+    top: 50%;
+    right: -10.5px; /* Adjust the position to control spacing around the bar */
+    transform: translateY(-50%);
+    color: #14FFF7; /* Color of the bar */
+  }
+  
+  .navbar-nav .nav-item:last-child::after {
+    content: none; /* Remove the bar from the last item */
+  }
+  
+/* Search Button Styles */
+
+.search-input {
+    display: none;
+    transition: all 0.3s ease; /* Adding transition for smooth animation */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.magnifying-glass {
+    display: flex;
+    padding: 5px; /* Adjust padding as needed */
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease; /* Adding transition for smooth animation */
+    margin: 0 10px; /* Add spacing between the icons */
+}
+
+.cart-icon,
+.account-icon {
+    display: flex;
+    padding: 5px; /* Adjust padding as needed */
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease; /* Adding transition for smooth animation */
+    margin: 0 10px; /* Add spacing between the icons */
+    margin-top: 15px;
+}
+
+.magnifying-glass i,
+.cart-icon i,
+.account-icon i {
+    font-size: 34px; /* Adjust the icon size as needed */
+    color: #FF6A92; /* Pink color */
+}
+
+.magnifying-glass:hover i,
+.account-icon:hover i,
+.cart-icon:hover i {
+    color: #14FFF7; /* Change the color on hover */
+}
+
+/* Styling for the expanded state */
+.expanded .search-input {
+    display: block;
+}
+
+.expanded .magnifying-glass {
+    padding: 5px; /* Keep the padding consistent when expanded */
+    color: #FFFFFF; /* Change the icon color */
+    background-color: transparent;
+}
+
+/*Small device Navbar toggler style*/
+button.navbar-toggler {
+    background-color: #FF6A92;
+}
+  
+/*Small device navbar list styling*/
+#offcanvasNavbar {
+    background-color: #1d8a99;
+    color: #FF6A92;
+    display: flex;
+}
+
+/*Small device navbar link list*/
+  .offcanvas-body {
+    margin-right: 25px;  /*centered to navbar*/
+  }
+
+/*Small device Navbar logo style*/
+#offcanvasNavbarLabel img {
+    height: 80px;
+    display: block;
+    margin: auto;
+}
+
+/* Cart Pop Up Box (Styled to match Account Pop Up) */
+
+.popup-cart {
+    background-color: #0BC9CD; 
+    position: fixed; /*so that it centers to page not navbar parent*/
+    top: 50%; /*to help center to page*/
+    bottom:30%; /*to help center to page*/
+    right: 38%; /*to help center to page*/
+    left:50%; /*to help center to page*/
+    opacity: 0; /*so its not visible unless pressed*/
+    transform: translate(-50%,-50%); /*to help center to page*/
+    width: 350px; /*size of pop up box*/
+    height: 300px; /*size of pop up box*/
+    padding:30px; /*size of pop up box*/
+    box-shadow: 3px 2px 2px 3px #0BC9CD; /*outer glow settings*/
+    box-shadow: 0 40px 30px #fff; /*outer glow settings*/
+    box-shadow: 0 0 60px 60px #f0f; /*outer glow settings*/
+    box-shadow: 0 0 20px 30px #0BC9CD;   /*outer glow settings*/
+    border-radius: 10px;
+    justify-content: center; 
+    box-shadow: /*inner glow settings*/
+      inset 0 0 40px #14FFF7,      /*inner glow settings*/
+      inset 20px 0 80px #FF6A92,   /*inner glow settings*/
+      inset -20px 0 80px #0BC9CD,  /*inner glow settings*/
+      inset 20px 0 200px #FF6A92,  /*inner glow settings*/
+      inset -20px 0 200px #0BC9CD, /*inner glow settings*/
+      0 0 40px #14fff7,            /*inner glow settings*/
+      -10px 0 80px #FF6A92,        /*inner glow settings*/
+      10px 0 80px #0BC9CD;  /*inner glow settings*/
+  }
+
+.popup-cart.active {
+    top:50%;
+    opacity: 1;
+    transform: translate(-50%,-50%)
+  }
+
+.popup-cart .close-btn {
+    position:absolute;
+    top:15px;
+    Right:15px;
+    height: 20px;
+    width: 20px;
+    color: #FF6A92;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+.popup-cart h2 {
+    text-align: center;
+    color: #0E0F1A;
+    font-size: 24px;
+  }
+
+.popup-cart .cart-content {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.popup-cart .game-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #FFFFFF;
+}
+
+.popup-cart .game-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.popup-cart .game-item p {
+    margin: 0;
+}
+
+
+/* Account Pop Up Box */
+  
+.popup { /*styles for pop up that appears after pressing account*/
+    background-color: #0BC9CD; 
+    position: fixed; /*so that it centers to page not navbar parent*/
+    top: 50%; /*to help center to page*/
+    bottom:30%; /*to help center to page*/
+    right: 38%; /*to help center to page*/
+    left:50%; /*to help center to page*/
+    opacity: 0; /*so its not visible unless pressed*/
+    transform: translate(-50%,-50%); /*to help center to page*/
+    width: 350px; /*size of pop up box*/
+    height: 300px; /*size of pop up box*/
+    padding:30px; /*size of pop up box*/
+    box-shadow: 3px 2px 2px 3px #0BC9CD; /*outer glow settings*/
+    box-shadow: 0 40px 30px #fff; /*outer glow settings*/
+    box-shadow: 0 0 60px 60px #f0f; /*outer glow settings*/
+    box-shadow: 0 0 20px 30px #0BC9CD;   /*outer glow settings*/
+    border-radius: 10px;
+    justify-content: center; 
+    box-shadow: /*inner glow settings*/
+      inset 0 0 40px #14FFF7,      /*inner glow settings*/
+      inset 20px 0 80px #FF6A92,   /*inner glow settings*/
+      inset -20px 0 80px #0BC9CD,  /*inner glow settings*/
+      inset 20px 0 200px #FF6A92,  /*inner glow settings*/
+      inset -20px 0 200px #0BC9CD, /*inner glow settings*/
+      0 0 40px #14fff7,            /*inner glow settings*/
+      -10px 0 80px #FF6A92,        /*inner glow settings*/
+      10px 0 80px #0BC9CD;  /*inner glow settings*/
+  }
+
+  .popup.active { /*once pop up is clicked adjusts opacity*/
+    top:50%;
+    opacity: 1;
+    transform: translate(-50%,-50%)
+  }
+
+  .popup .close-btn { /*close x button in top right corner*/
+    position:absolute;
+    top:15px;
+    Right:15px;
+    height: 20px;
+    width: 20px;
+    color: #FF6A92;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .form h2 { /* Log in title on pop up*/
+    text-align: center;
+    color: #0E0F1A;
+  }
+
+  .popup .form .form-element { /*div for email & password boxes*/
+    margin: 15px 0px;
+}
+  .popup .form .form-element label { /*title for email & password boxes*/
+    font-size: 14px;
+    color: #222;
+}
+
+  .popup .form .form-element input { /*email & password boxes*/
+     display: block;
+     border-radius: 5px;
+      background-color:#FF6A92;
+      color: #0E0F1A;
+}
+
+  .popup .form .form-element button { /*log in button on pop up*/
+    border-radius: 5px;
+    background-color: #FF6A92;
+}
+
+  /* CSS STYLES FOR THE BODY */
+  /* Custom CSS to colour to the body of the website */
+  body {
+    background-color: #0E0F1A; /* Can change the colour for background here */
+    padding-top: 130px; /*Added so navbar doesn't cover carousel*/
+  }
+  
+  /* Custom CSS to override the bg-body-tertiary class */
+  .custom-bg-color {
+    background-color: #0E0F1A;
+  }
+  
+  /* CAROUSEL */
+  /* Custom CSS styles for carousel */
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Adjust the height of the carousel here as needed */
+    overflow: hidden;
+  }
+  
+  /* Custom CSS for different font sizes in carousel captions */
+  .carousel-title {
+    font-size: 24px; /* Adjust the title font size as needed */
+    font-weight: bold; /* Optionally adjust font weight */
+  }
+  
+  .carousel-description {
+    font-size: 18px; /* Adjust the description font size as needed */
+  }
+  
+  /* Custom CSS styles for carousel button - both previous and next */
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%; /* Vertically centering the button */
+    transform: translateY(-50%); /* Vertically centering the button */
+    width: 50px; /* Can change the width of the button here */
+    height: 50px; /* Can change the height of the button here */
+    border-radius: 50%; /* Making the button circular */
+    font-size: 24px; /* Adjusting the font size of the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* To ensure the buttons appear above the images */
+    box-shadow: 0 0 10px 5px rgba(232, 106, 146, 0.5); /* For the defused border effect */
+    background-color: #14FFF7; /* The background colour of the prev and next button */
+    color: #fff; /* Arrow colours of the icon to white */
+    border: 2px solid rgba(232, 106, 146, 0.5); /* Adding a semi-transparent border */
+    background-clip: padding-box; /* Can change the background colour only to the padding area here*/
+  }
+  
+  /* Custom CSS styles for hover effect on carousel buttons both prev and next */
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: #0BC9CD; /* Can change background colour on hover */
+    box-shadow: 0 0 10px 5px rgba(208, 73, 118, 0.5); /* Changing box-shadow on hover */
+  }
+  
+  /* Adding space before the previous button */
+  .carousel-control-prev {
+    left: 35px; /* Adjusting the left position to add space before the button*/
+  }
+  
+  /* Add space after the next button */
+  .carousel-control-next {
+    right: 35px; /* Adjusting the right position to add space after the button*/
+  }
+  
+  /* Custom CSS styles for carousel images */
+  .carousel-item {
+    position: relative; /* Make sure the container is relatively positioned */
+    width: 100%;
+    height: 800px; /* Match the height of the carousel here */
+    overflow: hidden; /* Hide any overflow beyond the container */
+  }
+  
+  /* Add the image as a background image */
+  .carousel-item img {
+    width: 100%; /* Scale the width of the image to fit the container */
+    height: 100%; /* Scale the height of the image to fit the container */
+    object-fit: cover; /* Resize the image to cover the entire container while preserving aspect ratio */
+    position: absolute; /* Position the image absolutely within the container */
+    top: 0;
+    left: 0;
+  }
+  
+  /* Custom CSS styles for carousel captions */
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text in mobile view */
+  }
+  
+  .carousel-caption h5,
+  .carousel-caption p {
+    margin-bottom: 90px;
+    padding: 0;
+  }
+  
+  
+/*LATEST NEWS SECTION */
+
+/* Custom CSS class for setting text colour for the latest news title */
+.custom-text-big {
+    color: #14FFF7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px; /* Can adjust the font size as needed */
+    text-align: left;
+    text-decoration: underline; 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: -30px;
+    margin-left: -80px;
+  }
+  
+  /* Custom CSS class for platform label */
+  .platform-label {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    padding: 2px 40px;
+    background-color: #14FFF7; /* Darker background color */
+    color: #333; /* Lighter text color */
+    font-weight: bold;
+    border-radius: 0;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Faded white border with 30% opacity */
+  }
+   
+  /* Custom CSS to remove rounded edges from cards with class "no-rounded" */
+  .card.no-rounded {
+    border-radius: 0;
+  }
+  
+  /* Custom CSS to remove borders from cards with class "no-border" */
+  .card.no-border {
+    border: none;
+  }
+  
+  /* Custom CSS to remove space between cards with class "no-margin" */
+  .card.no-margin {
+    margin-right: 0;
+  }
+  
+  /* Custom CSS class for setting background colour for dark cards */
+  .custom-card-dark {
+    background-color: #1D8A99;
+  }
+  
+  /* Custom CSS class for setting text color for dark cards */
+  .custom-text-light {
+    color: #ffffff;
+  }
+  
+  /* Custom CSS class for setting background colour for light cards */
+  .custom-card-light {
+    background-color: #0BC9CD;
+  }
+  
+  /* Custom CSS class for setting text colour for light cards */
+  .custom-text-dark {
+    color: #333;
+  }
+  
+  /* Custom CSS class for setting link colour for cards */
+  .custom-link-light {
+    color: #FF6A92;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* Dark gray shadow */
+  }
+
+  .card-title {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  }
+  
+  /* Adjusting card height */
+  .card {
+    margin-left: -80px;
+    height: 250px; /* Adjust here the card size */
+    width: 500px;
+    text-align: center;
+  }
+
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .latest-news-title {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-left: 0; /* Reset margin for mobile */
+    }
+
+    .card .platform-label,
+    .card .card-title {
+        position: static; /* Reset to default positioning on mobile */
+        border: none; /* Remove border on mobile */
+        margin-top: 10px;
+        padding: 0; /* Remove padding on mobile */
+    }
+
+    .cards-section {
+        margin-top: 20px; /* Add space between Carousel and Cards for mobile */
+    }
+
+    .card {
+        margin: 0 auto 20px; /* Center cards and add spacing between them */
+        width: 90%; /* Adjust card width for mobile */
+        max-width: 300px; /* Set maximum width */
+        margin-left: 25px;
+    }
+}
+
+  
+  /*BIG NEWS ANNOUNCEMENT SECTION */
+  /* Custom CSS for Big News Announcement Section */
+  .big-news-section {
+    background-color: #0E0F1A; /* Background colour for the section can be changed here */
+    padding: 30px 0; /* Adding some padding to the section for spacing */
+  }
+  
+  /* Custom CSS for the size of the cards */
+  .big-news-section .card {
+    width: 500px; /* Change here the width of the cards */
+    height: 350px; /* Change here the height of the cards */
+  }
+  
+  /* Custom CSS to remove rounded edges from cards with class "no-rounded" */
+  .big-news-section .card.no-rounded {
+    border-radius: 0; 
+  }
+  
+  /* Custom CSS to remove borders from cards with class "no-border" */
+  .big-news-section .card.no-border {
+    border: none; 
+  }
+  
+  /* Custom CSS to remove space between cards with class "no-margin" */
+  .big-news-section .card.no-margin {
+    margin-right: -15px;
+  }
+  
+  /* Custom CSS class for setting background colour for the big news announcement card*/
+  .big-news-section .custom-card-white {
+    background-color: #0E0F1A; 
+  }
+  
+  /* Custom CSS for placement of BUZZ at the top left */
+  .big-news-section .card-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #14FFF7;
+  }
+  
+  /* Custom CSS class for setting text colour for the big news announcement card */
+  .big-news-section .card-title-1 {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px; /* Increase the font size as needed */
+    text-align: left; 
+    margin-top: 80px; /* Adding some spacing between the discount percentage and the product name */
+    top: 35%;
+    text-shadow: 0 10px 20px #14FFF7; /* Adding the glow effect */
+  }
+  /* Custom CSS class for setting text colour for the big news announcement card */
+  .big-news-section .card-title-2 {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px; /* Increase the font size as needed */
+    text-align: left; 
+    margin-top: 2px; /* Adding some spacing between the discount percentage and the product name */
+    top: 15%;
+    text-shadow: 0 10px 20px #14FFF7; /* Adding the glow effect */
+  }
+  
+  /* Custom CSS class for setting background colour for the image card */
+  .big-news-section .custom-card-image {
+    background-color: #FF6A92; 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Custom CSS style for setting background colour for the sale and buy now card */
+  .big-news-section .custom-card-pop {
+    background-color: #FF6A92; 
+  }
+  
+  /* Custom CSS class for placement and text for SALE */
+  .big-news-section .sale-info .card-sale {
+    text-align: left;
+    font-size: 24px; 
+    font-weight: bold; 
+    text-decoration: underline; 
+    color: #333; 
+  }
+  
+  /* Custom CSS class for placement and text for percentage off */
+  .big-news-section .sale-info .card-pctoff {
+    position: absolute;
+    top: 60px;
+    left:10px;
+    background-color: #14FFF7;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #333;
+    font-weight: bold; 
+  }
+  
+  /* Custom CSS class for placement and text for game headline for sale */
+  .big-news-section .sale-info .card-headline {
+    text-align: center;
+    color: #333;
+    font-size: 33px;
+    font-weight: bold; 
+    margin-top: 40px; /* Adding some spacing between the discount percentage and the product name */
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.75); /* Add a glow effect */
+  }
+  
+  /* Custom CSS class for placement and BUY NOW button */
+  .big-news-section .buy-now-button {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: #333;
+  }
+  
+  /* Custom CSS styles for BUY NOW button */
+  .big-news-section .btn-primary {
+    background-color: #14FFF7;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Custom CSS styles for hover effect on BUY NOW button */
+  .big-news-section .btn-primary:hover {
+    background-color: #14FFF7; /* Darker color on hover */
+  }
+  
+  
+/*FOOTER */
+/* Custom CSS styles for Footer Section */
+.social-footer {
+    padding: 1rem;
+    background: #FF6A92;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footerlogo {
+    margin-left: 30px;
+    display: flex;
+    align-items: left;
+    position: absolute;
+  }
+  
+  .site-footer {
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  
+  /* Social Media Icons */
+  .social-wrapper {
+    text-align: right;
+    margin-right: 60px;
+  }
+  
+  .social-wrapper ul li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  .twitter-icon,
+  .facebook-icon,
+  .instagram-icon,
+  .discord-icon,
+  .twitch-icon,
+  .youtube-icon {
+    margin-top: 0.625em;
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    border-radius: 25px;
+  }
+  
+  .twitter-icon:hover,
+  .facebook-icon:hover,
+  .instagram-icon:hover,
+  .discord-icon:hover,
+  .twitch-icon:hover,
+  .youtube-icon:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+  }
+  
+  .site-footer {
+    background-color: #0E0F1A;
+  }
+  
+  .footercontents ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    color: #BCB8B8;
+    display: flex;
+    align-items: left;
+    margin-top: 30px;
+  }
+  
+  .footercontents ul li {
+    list-style-type: none;
+
+  }
+  
+  .footer-item > a:link {
+    padding: 10px;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  
+  .footer-nav {
+    color: #BCB8B8;
+  }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .social-footer {
+        flex-direction: column; /* Stack content on smaller screens */
+        text-align: center;
+    }
+
+    .footerlogo {
+        margin-left: 20px;
+    }
+
+    .social-wrapper ul {
+        margin-top: 40px;
+    }
+
+    .footercontents ul {
+        flex-direction: column; /* Stack links under each other on smaller screens */
+        margin-top: 20px; /* Add space between logo and links */
+        margin-left: -20px;
+    }
+
+    .footercontents ul li {
+        margin: 5px 0; /* Add smaller margin between links */
+    }
+
+    .twitter-icon,
+    .facebook-icon,
+    .instagram-icon,
+    .discord-icon,
+    .twitch-icon,
+    .youtube-icon {
+        width: 25px; /* Reduce icon size */
+        height: 25px;
+        margin-top: 130px;
+    }
+}
+  

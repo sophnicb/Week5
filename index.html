@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head section -->
+<head>
+
+    <!-- Meta tags for responsiveness and encoding -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- External custom CSS stylesheet -->
+    <link rel="stylesheet" href="cfggstyle.css">
+    
+    <!-- Page title -->
+    <title>CFGG</title>
+
+    <!-- Font For the Home Page -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--Link for Importing Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<!-- Body section -->
+<body>
+
+   <!-- Header section -->
+   <header>  
+    <!--navbar group-->  
+    <nav class="navbar custom-bg-color navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!--Logo on nav bar-->
+            <a class="navbar-brand" href="index.html">
+                <img src="Pics/CFGG Logo2.png" alt="CFGG" height="120px" width="210px"> </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="pics/CFGG Logo2.png" alt="Logo"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="hover navbar-nav justify-content-center flex-grow-1 pe-5">
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color home-link" aria-current="page" href="Index.html" target="_blank">Home</a>
+                            <!-- Add links to nav buttons -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Mobile.html" target="_blank">Mobile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Switch.html" target="_blank">Switch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="PlayStation.html" target="_blank">PlayStation</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search Bar-->
+                    <div class="header-search">
+                    <form class="d-flex mt-3 search-form" role="search">
+                        <div class="search-input">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <button class="btn magnifying-glass" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    </div>
+                    
+                    <!-- Cart Icon -->
+                    <div class="cart-container">
+                        <button id="cart" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Cart Pop Up Box -->
+                    <div class="popup-cart">
+                        <div class="close-btn">&times;</div>
+                        <div class="cart-content">
+                            <h2>Your Cart</h2>
+                            <div class="game-item">
+                                <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-sackboy-image-block-01-en-28jul21?$1600px$" alt="Sackboy" width="50px">
+                                <p>Sackboy™: A Big Adventure</p>
+                            </div>
+                            <div class="game-item">
+                                <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-ratchet-and-clank-rift-apart-image-block-en-26aug22?$1600px$" alt="Ratchet And Clank" width="50px">
+                                <p>Ratchet And Clank Rrift Apart</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Account Icon -->
+                    <div class="account-container">
+                        <button id="account" class="account-icon">
+                            <i class="fas fa-user"></i>
+                        </button>
+                    </div>
+
+                    <!-- Account Pop Up Box -->
+                    <div class="popup"> 
+                        <div class="close-btn">&times;</div> <!--cross in top right corner to close pop up-->                           
+                        <div class="form"> <!--Log in & elements on pop up box-->
+                            <h2>Log In</h2>
+                            <div class="form-element">
+                                <label for="email">Email</label><!--email input bar-->
+                                <input type="Text" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-element"> <!--password input bar-->
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-element">
+                                <button> Log In </button> <!--Button to log in-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Adding the carousel here -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Carousel - First slide -->
+            <div class="carousel-item active">
+                <img src="Pics/Mobile2.png" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="carousel-title">Mobile Games</h5>
+                    <p class="carousel-description">Discover the latest games, news. exclusive titles on Mobile. From action-packed adventures to breathtaking graphics, the Mobile page offers a gaming paradise for enthusiasts.</p>
+                </div>
+            </div>
+            <!-- Carousel - Second slide -->
+            <div class="carousel-item">
+                <img src="Pics/PlayStation2.png" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="carousel-title">PlayStation Games</h5>
+                    <p class="carousel-description">Discover the latest games, news. exclusive titles on the PlayStation platform. From action-packed adventures to breathtaking graphics, PlayStation offers a gaming paradise for enthusiasts.</p>
+                </div>
+            </div>
+            <!-- Carousel - Third slide -->
+            <div class="carousel-item">
+                <img src="Pics/Switch2.png" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="carousel-title">Nintendo Switch Games</h5>
+                    <p class="carousel-description">Discover the latest games, news. exclusive titles on the Switch platform. From action-packed adventures to breathtaking graphics, Switch offers a gaming paradise for enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel - Previous and Next buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <!-- Latest News Cards Section -->
+    <section class="latest-news-section">
+        <div class="container mt-5">
+            <div class="row no-gutters justify-content-between"> <!-- Latest News Title -->
+                <div class="col-md-4">
+                    <h4 class="latest-news-title custom-text-big">LATEST NEWS</h4>
+                </div>
+                <div class="container mt-5 cards-section"> <!-- Adding margin top to the card section for space between Carousel and Cards -->
+                    <div class="row no-gutters justify-content-between"> <!-- Adding "no-gutters" class to remove space between rows -->
+                        <!-- First Row - First Card Section -->
+                        <div class="col-md-3">
+                            <div class="card custom-card-dark no-rounded no-border no-margin"> <!-- Can change Card specs from here -->
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column custom-text-light">
+                                    <span class="platform-label">Switch</span>
+                                    <h5 class="card-title">REVIEW: The Legend Of Zelda </h5>
+                                    <p class="card-text">Summary: An epic adventure across the land and skies of Hyrule awaits in The Legend of Zelda.</p>
+                                    <a href="https://www.metacritic.com/game/switch/the-legend-of-zelda-tears-of-the-kingdom" class="card-link custom-link-light" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- First Row - Second Card Section -->
+                        <div class="col-md-3">
+                            <div class="card custom-card-light no-rounded no-border no-margin"> <!-- Can change Card specs from here -->
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column custom-text-dark">
+                                    <span class="platform-label">PlayStation</span>
+                                    <h5 class="card-title">Smurfs Kart Targets Game of the Year on PS5, PS4</h5>
+                                    <p class="card-text">Smurfs Kart is launching for PS5 and PS4, bringing disruption to the ongoing Game of the Year debate. </p>
+                                    <a href="https://www.pushsquare.com/news/2023/05/smurfs-kart-targets-game-of-the-year-status-on-ps5-ps4" class="card-link custom-link-light" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- First Row - Third Card Section -->
+                        <div class="col-md-3">
+                            <div class="card custom-card-dark no-rounded no-border no-margin"> <!-- Can change Card specs from here -->
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column custom-text-light">
+                                    <span class="platform-label">Mobile</span>
+                                    <h5 class="card-title">The best mobile games of 2023 [iOS and Android]</h5>
+                                    <p class="card-text">AUGUST: Reviews of all the best Android and iOS games of 2023, so far. </p>
+                                    <a href="https://www.pocketgamer.com/best-games/mobile-games-of-2023/" class="card-link custom-link-light" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters justify-content-between"> <!-- Second Row of Cards -->
+                        <!-- Second Row - First Card Section -->
+                        <div class="col-md-3">
+                            <div class="card custom-card-light no-rounded no-border no-margin"> <!-- Can change Card specs from here -->
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column custom-text-dark">
+                                    <span class="platform-label">PlayStation</span>
+                                    <h5 class="card-title">Here's When Mortal Kombat 1's PS5 Beta Starts</h5>
+                                    <p class="card-text">You won’t have to wait long to try out Mortal Kombat 1, the game’s pre-order beta is just weeks away. </p>
+                                    <a href="https://www.pushsquare.com/news/2023/07/heres-when-mortal-kombat-1s-ps5-pre-order-beta-starts" class="card-link custom-link-light" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Row - Second Card Section -->
+                        <div class="col-md-3">
+                            <div class="card custom-card-dark no-rounded no-border no-margin"> <!-- Can change Card specs from here -->
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column custom-text-light">
+                                    <span class="platform-label">Switch</span>
+                                    <h5 class="card-title">Broforce - Official Broforce Forever Launch Trailer </h5>
+                                    <p class="card-text">Broforce is a 2D side-scrolling action game developed by free lives.</p>
+                                    <a href="https://www.ign.com/videos/broforce-official-broforce-forever-update-launch-trailer" class="card-link custom-link-light" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Row - Third Card Section -->
+                        <div class="col-md-3">
+                            <div class="card custom-card-light no-rounded no-border no-margin"> <!-- Can change Card specs from here -->
+                                <div class="card-body d-flex justify-content-center align-items-center flex-column custom-text-dark">
+                                    <span class="platform-label">Mobile</span>
+                                    <h5 class="card-title">MARIO KART TOUR [iOS and Android]</h5>
+                                    <p class="card-text">Kart Tier List - The best options ranked: This list will rank each of the vehicles that are playable.</p>
+                                    <a href="https://www.pocketgamer.com/pokemon-go/2023-world-championship-timed-research/" class="card-link custom-link-light" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                <!-- Big News Announcement Section -->
+                <section class="big-news-section">
+                    <div class="container mt-5">
+                        <div class="row no-gutters justify-content-between">
+                            <!-- Big News Card -->
+                            <div class="col-md-3">
+                                <div class="card custom-card-white no-rounded no-border no-margin">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-top">BUZZ</h4>
+                                        <h5 class="card-title-1">BIG NEWS</h5>
+                                        <h5 class="card-title-2">ANNOUNCEMENT</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Image Card Section -->
+                            <div class="col-md-3">
+                                <div class="card custom-card-image justify-content-center align-items-center no-rounded no-border no-margin">
+                                    <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/63JzhYgJbTQC1yW74tmZLJ/3a226d878cf116e279e048a1d5d4e624/jd23-buy-keyart.jpg" alt="Image" class="img-fluid border">
+                                </div>
+                            </div>
+                            <!-- Sale and Buy Now Section -->
+                            <div class="col-md-3">
+                                <div class="card custom-card-pop no-rounded no-border no-margin">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="sale-info">
+                                            <h5 class="card-sale">SALE</h5>
+                                            <h6 class="card-pctoff">-30% OFF</h6> <!-- Replace "30% OFF" with the desired discount percentage -->
+                                            <h7 class="card-headline">JUST DANCE 2023 EDITION </h7>
+                                        </div>
+                                        <div class="buy-now-button">
+                                            <a href="https://www.very.co.uk/nintendo-switch-just-dance-2023-code-in-box/1600820187.prd?sku=sku25637936&cm_mmc=google-_-PLA+-+Generic-_--_-__&utm_campaign=Generic_Electricals+-+Gaming+-+PMAX&utm_medium=cpc&utm_source=google&utm_term=&campaigntype=shopping&gclid=CjwKCAjw_uGmBhBREiwAeOfsd7IT8cVTyPk2dcBSiVIEPuhXxEJWqIteY-W2Yhi0qNXO8DoZ6NhdFRoCd30QAvD_BwE&gclsrc=aw.ds" class="btn btn-primary" target="_blank">BUY NOW</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+             
+<!-- Footer Section -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="footerlogo"> <!--footer logo-->
+        <img src="Pics/CFGG Logo2.png" alt="CFGG" height="120px" width="210px">
+        <div class="footercontents">
+            <ul> <!--add links-->
+                <li class="footer-item">
+                    <a href="#">Terms of Use</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="social-wrapper"> <!--social media icons-->
+        <ul>
+            <li>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="Pics/twitter.png" alt="Twitter Logo" class="twitter-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="Pics/insta.png" alt="Instagram Logo" class="instagram-icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://discord.com/" target="_blank">
+                            <img src="Pics/discord.png" alt="Discord Logo" class="discord-icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/" target="_blank">
+                                <img src="Pics/facebook.png" alt="Facebook Logo" class="facebook-icon"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitch.com/" target="_blank">
+                                    <img src="Pics/twitch.png" alt="twitch Logo" class="twitch-icon"></a>
+                                </li>
+                                <li>
+                                    <a href="https://youtube.com/" target="_blank">
+                                        <img src="Pics/youtube.png" alt="Youtube Logo" class="youtube-icon"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav" role="navigation"><!--text with company/copyright-->
+                                <h6>CFGG &copy; All rights reserved.</h6>
+                            </div>
+                        </footer>
+
+<!--Adding CSS Bootstrap link here -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+
+<!--Linkig JavaScript file here -->
+<script src = "JavaScriptAll.js"></script>   
+</body>
+</html>
+

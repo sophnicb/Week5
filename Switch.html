@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head section -->
+<head>
+
+    <!-- Meta tags for responsiveness and encoding -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- External custom CSS stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <!-- Page title -->
+    <title>CFGG Switch</title>
+
+    <!-- Font For the Home Page -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--Link for Importing Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<!-- Body section -->
+<body>
+
+   <!-- Header section -->
+   <header>  
+    <!--navbar group-->  
+    <nav class="navbar custom-bg-color navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!--Logo on nav bar-->
+            <a class="navbar-brand" href="index.html">
+                <img src="Pics/CFGG Logo2.png" alt="CFGG" height="120px" width="210px"> </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="pics/CFGG Logo2.png" alt="Logo"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="hover navbar-nav justify-content-center flex-grow-1 pe-5">
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color home-link" aria-current="page" href="Index.html" target="_blank">Home</a>
+                            <!-- Add links to nav buttons -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Mobile.html" target="_blank">Mobile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active custom-link-color nav-item-link" aria-current="page" href="Switch.html" target="_blank">Switch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="PlayStation.html" target="_blank">PlayStation</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search Bar-->
+                    <div class="header-search">
+                    <form class="d-flex mt-3 search-form" role="search">
+                        <div class="search-input">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                        <button class="btn magnifying-glass" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    </div>
+                    
+                    <!-- Cart Icon -->
+                    <div class="cart-container">
+                        <button id="cart" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Cart Pop Up Box -->
+                    <div class="popup-cart">
+                        <div class="close-btn">&times;</div>
+                        <div class="cart-content">
+                            <h2>Your Cart</h2>
+                            <div class="game-item">
+                                <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-sackboy-image-block-01-en-28jul21?$1600px$" alt="Sackboy" width="50px">
+                                <p>Sackboy™: A Big Adventure</p>
+                            </div>
+                            <div class="game-item">
+                                <img src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-ratchet-and-clank-rift-apart-image-block-en-26aug22?$1600px$" alt="Ratchet And Clank" width="50px">
+                                <p>Ratchet And Clank Rrift Apart</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Account Icon -->
+                    <div class="account-container">
+                        <button id="account" class="account-icon">
+                            <i class="fas fa-user"></i>
+                        </button>
+                    </div>
+
+                    <!-- Account Pop Up Box -->
+                    <div class="popup"> 
+                        <div class="close-btn">&times;</div> <!--cross in top right corner to close pop up-->                           
+                        <div class="form"> <!--Log in & elements on pop up box-->
+                            <h2>Log In</h2>
+                            <div class="form-element">
+                                <label for="email">Email</label><!--email input bar-->
+                                <input type="Text" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-element"> <!--password input bar-->
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-element">
+                                <button> Log In </button> <!--Button to log in-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+   
+    <!-- Hero section -->
+    <div class="hero text-center">
+        <div class="hero-content text-light">
+            <i class="fas fa-fire mt-n1 me-1 hot-icon"></i> <!-- Flame icon -->
+            <!-- Title -->
+            <h1 class="hot-topic-title">Get Ready for the Hottest Gaming News</h1>
+        </div>
+        <img src="Pics/Switch2.png" alt="Hero Background" class="hero-background">
+    </div>
+    
+    
+    <!-- Latest News Articles -->
+    <section id="latest-news" class="news">
+        <div class="news-articles">
+            <div class="article-card">
+                <img src="https://www.gematsu.com/wp-content/uploads/2023/08/Detective-Pikachu-Returns_2023_08-08-23_030.jpg?w=640" alt="Detective Pikachu Returns" height="200px">
+                <div class="article-content">
+                    <h3>Detective Pikachu Returns Comes With Exclusive Pokémon Trading Card</h3>
+                    <p>Brewing over on the official Japanese Pokémon website (via Nintendo Wire), early purchases of Detective Pikachu Returns will include an exclusive Pokémon Trading Card, which features the coffee-loving hard-boiled detective riding the back of his partner Growlithe...</p>
+                    <a href="https://www.nintendolife.com/news/2023/08/detective-pikachu-returns-comes-with-exclusive-pokemon-trading-card-in-japan" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://videogames.si.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk2MzQzODkyMjYwNDMxNjM0/fifa-23-nwsl-1.jpg" alt="New EA Sports FC 24 Deep Dive" height="200px">
+                <div class="article-content">
+                    <h3>New EA Sports FC 24 Deep Dive Welcomes Women's Football To Ultimate Team</h3>
+                    <p>Ultimate Team might have just been one of the most popular modes in the FIFA series, and it looks like EA is keen to carry that on in EA Sports FC 24 as it has today revealed some of the new features that we can expect from the upcoming title's team-builder mode...</p>
+                    <a href="https://www.nintendolife.com/news/2023/08/new-ea-sports-fc-24-deep-dive-welcomes-womens-football-to-ultimate-team" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://cdn-cf.ginx.tv/respawn-cdn/HF_4aeKLcImSy2vV_LXDkXflU3fZ1KOgqMyecCJGvEM/fill/1280/0/no/1/aHR0cHM6Ly93d3cuZ2lueC50di91cGxvYWRzMi9PdmVyd2F0Y2gyL1N1cHBvcnRfNi9PdmVyd2F0Y2hfMl9TdXBwb3J0X0hlcm9fU2Vhc29uXzYuanBlZw.webp" alt="Overwatch 2 - Official Season 6 Trailer" height="200px">
+                <div class="article-content">
+                    <h3>Overwatch 2 - Official Season 6 Trailer</h3>
+                    <p>Watch the latest trailer for Overwatch 2 to see what's coming in Season 6, including a new support hero Illari, new Invasion story missions, a new PVP mode: Flashpoint, a new game mode called Hero Mastery, new PvP maps like Suravasa and New Junk City, a new Invasion battle pass, and more...</p>
+                    <a href="https://www.ign.com/videos/overwatch-2-official-season-6-trailer" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://i0.wp.com/www.vooks.net/img/2023/02/Vooks-zelda-tears-1.jpg?fit=1000%2C562&ssl=1" alt="Review: The Legend Of Zelda " height="200px">
+                <div class="article-content">
+                    <h3>Review: The Legend Of Zelda - Tears Of The Kingdom</h3>
+                    <p>Summary: An epic adventure across the land and skies of Hyrule awaits in The Legend of Zelda™: Tears of the Kingdom for Nintendo Switch™. The adventure is yours to create in a world fueled by your imagination. In this sequel to The Legend of Zelda: Breath of the Wild, you’ll decide your own path…</p>
+                    <a href="https://www.metacritic.com/game/switch/the-legend-of-zelda-tears-of-the-kingdom" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Broforce.jpg" alt="Official Broforce Forever Update Launch Trailer" height="200px">
+                <div class="article-content">
+                    <h3>Broforce - Official Broforce Forever Update Launch Trailer</h3>
+                    <p>Broforce is a 2D side-scrolling action game developed by Free Lives. Broforce is releasing its final update titled Broforce Forever bringing an improved and expanded campaign with new unlocks, six new characters, four new challenge levels, bug fixes, and more...</p>
+                    <a href="https://www.pushsquare.com/news/2023/08/lies-of-p-goes-gold-with-september-ps5-ps4-launch-looming" class="read-more" target="_blank">Read More</a>
+                </div>
+            </div>
+            <!-- Add more article cards here -->
+        </div>
+    </section>
+    
+    <!-- Popular Games Section -->
+    <div class="popular-games">
+        <div class="game-card">
+            <img src="https://img.asmedia.epimg.net/resizer/W1ol1JJZH5AoqN18TlyUpuV0zLk=/140x210/as01.epimg.net/meristation/imagenes/2023/2/21/game_cover/761384920_Cover.jpg" alt="Pikmin 4">
+            <h3>Pikmin 4</h3>
+            <h4> A new adventure blossoms. Discover a strange new world inhabited by tiny plant-like creatures in Pikmin 4 for Nintendo Switch! </h4>
+            <a href="https://www.nintendo.com/store/products/pikmin-4-switch/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://thumbnails.pcgamingwiki.com/1/1b/Stardew_Valley_cover.png/300px-Stardew_Valley_cover.png" alt="Stardew Valley">
+            <h3>Stardew Valley</h3>
+            <h4> You’ve inherited your grandfather’s old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. </h4>
+            <a href="https://www.nintendo.com/store/products/stardew-valley-switch/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_1.0/c_scale,w_600/ncom/en_US/games/switch/m/mario-kart-8-deluxe-switch/description-image" alt="Mario Kart 8 Deluxe">
+            <h3>Mario Kart 8 Deluxe</h3>
+            <h4> Burn rubber across Mushroom Kingdom raceways—underwater, in the sky, upside-down in zero-g, and past the finish—for the win!. </h4>
+            <a href="https://www.nintendo.com/store/products/mario-kart-8-deluxe-switch/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://w.wallha.com/ws/14/2iupQJmB.jpg" alt="Metroid Prime">
+            <h3>Metroid Prime</h3>
+            <h4> Experience this critically acclaimed first-person adventure like never before with remastered visuals, audio, controls, and more. </h4>
+            <a href="https://www.nintendo.com/store/products/metroid-prime-remastered-switch/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <div class="game-card">
+            <img src="https://thumbnails.pcgamingwiki.com/c/ce/Doom_64_cover.jpg/300px-Doom_64_cover.jpg" alt="Doom 64">
+            <h3>Doom 64</h3>
+            <h4> Fight against demons in your crusade to hunt down the Mother of Demons and stop Hell's invasion. </h4>
+            <a href="https://www.nintendo.com/store/products/doom-64-switch/" class="buy-now" target="_blank">Buy Now</a>
+        </div>
+        <!-- Add more game cards here -->
+    </div>
+    
+    
+    <!-- Footer Section -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="footerlogo"> <!--footer logo-->
+        <img src="Pics/CFGG Logo2.png" alt="CFGG" height="90px" width="180px">
+        <div class="footercontents">
+            <ul> <!--add links-->
+                <li class="footer-item">
+                    <a href="#">Terms of Use</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="social-wrapper"> <!--social media icons-->
+        <ul>
+            <li>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="Pics/twitter.png" alt="Twitter Logo" class="twitter-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="Pics/insta.png" alt="Instagram Logo" class="instagram-icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://discord.com/" target="_blank">
+                            <img src="Pics/discord.png" alt="Discord Logo" class="discord-icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/" target="_blank">
+                                <img src="Pics/facebook.png" alt="Facebook Logo" class="facebook-icon" ></a>
+                            </li>
+                            <li>
+                                <a href="https://twitch.com/" target="_blank">
+                                    <img src="Pics/twitch.png" alt="twitch Logo" class="twitch-icon"></a>
+                                </li>
+                                <li>
+                                    <a href="https://youtube.com/" target="_blank">
+                                        <img src="Pics/youtube.png" alt="Youtube Logo" class="youtube-icon"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav" role="navigation"><!--text with company/copyright-->
+                                <h6>CFGG &copy; All rights reserved.</h6>
+                            </div>
+                        </footer>
+<!--Adding CSS Bootstrap link here -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+
+<!--Linkig JavaScript file here -->
+<script src = "JavaScriptAll.js"></script>   
+
+</body>
+</html>
